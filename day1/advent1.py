@@ -7,15 +7,10 @@ def reader(rotation, code):
     number = int(rotation[1:])
     
 
-    for r in range(1):
-        if direction == "l":
-            code = (code - number) % 100
-            # if code < 0:
-            #     code = code + 100
-        elif direction == "r":
-            code = (code + number) % 100
-            # if code > 99:
-            #     code = code - 100
+    if direction == "l":
+        code = (code - number) % 100
+    elif direction == "r":
+        code = (code + number) % 100
     
     return code
         
@@ -25,10 +20,6 @@ def count_the_zeros(count):
         return + 1
     else:
         return 0
-        
-def file_reader():
-    pass
-
 
 def main():
     code = 50
